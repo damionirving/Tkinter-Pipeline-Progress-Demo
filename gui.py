@@ -2,9 +2,11 @@
 # Tkinter GUI that imports pipeline.py (worker) and ProgressHandler.
 
 #=============================================================================================================================
-# NEW BUILD LOCATION
+# [1] NEW BUILD LOCATION
 # pyinstaller --noconsole --onefile --name PipelineGUI --collect-all tkinter --distpath exe_out\dist --workpath exe_out\build gui.py
-
+#
+# [2] from spec file
+# pyinstaller PipelineGUI.spec
 #=============================================================================================================================
 
 
