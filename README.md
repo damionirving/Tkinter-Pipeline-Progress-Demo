@@ -150,6 +150,37 @@ On macOS/Linux, use `/` instead of `\` for paths.
 
 ---
 
+## 8) AI Project Recreation Prompt
+
+If you ever need to recreate or extend this entire project using an AI model such as ChatGPT, use this prompt:
+
+> **Prompt:**  
+> You are an expert Python and Tkinter developer. I have a zipped project containing a Tkinter GUI that runs a background worker (`pipeline.py`) and reports progress using a callable class (`ProgressHandler`).  
+>  
+> I want you to:
+> 1. **Unpack** the provided ZIP archive and inspect its structure and code.  
+> 2. **Explain** how the project works — the flow between `gui.py`, `pipeline.py`, and `progress_handler.py`.  
+> 3. **Rebuild or extend** the project in a new directory named `tk_pipeline_gui`.  
+> 4. Ensure it uses **modern Python 3 syntax**, `venv`, and best practices for threading and Tkinter.  
+> 5. Include the following files:
+>    - `gui.py`: main Tkinter interface that runs the pipeline in a thread and shows progress.  
+>    - `pipeline.py`: background task that calls a progress callback.  
+>    - `progress_handler.py`: callable class that queues progress and updates Tkinter safely.  
+>    - `.gitignore`: Python defaults plus venv and build folders.  
+>    - `README.md`: detailed documentation explaining installation, venv setup (non-Conda), execution, and building an `.exe` using PyInstaller.  
+> 6. Add a **section in the README** that documents full program flow, showing how each script interacts, and include the PyInstaller command:
+>    ```bash
+>    pyinstaller --noconsole --onefile --name PipelineGUI --collect-all tkinter --distpath exe_out\dist --workpath exe_out\build gui.py
+>    ```
+> 7. Ensure the project can be run with:
+>    ```bash
+>    python gui.py
+>    ```
+>    and built into a standalone executable on Windows or macOS.  
+> 8. Output the final project as a downloadable `.zip` archive.
+
+---
+
 ## License
 
 Public domain / Unlicense.
