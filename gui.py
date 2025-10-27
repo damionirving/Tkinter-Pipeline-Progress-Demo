@@ -6,7 +6,8 @@
 # pyinstaller --noconsole --onefile --name PipelineGUI --collect-all tkinter --distpath exe_out\dist --workpath exe_out\build gui.py
 #
 # [2] from spec file
-# pyinstaller PipelineGUI.spec
+# pyinstaller PipelineGUI.spec --distpath exe_out\dist --workpath exe_out\build
+
 #=============================================================================================================================
 
 
